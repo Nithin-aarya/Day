@@ -1,0 +1,269 @@
+### HTML Exam Notes with Examples
+
+---
+
+#### **1. HTML Basics (Lecture 3)**
+
+**HTML Definition:**
+- HyperText Markup Language for creating web pages and applications.
+- HTML is not a programming language but a markup language.
+
+**Structure of an HTML Page:**
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <h1>Welcome to HTML</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+
+**Key Tags:**
+- <html>: Root element.
+- <head>: Metadata container.
+- <body>: Main content of the webpage.
+- <h1> to <h6>: Headings (H1 is largest, H6 is smallest).
+- <p>: Paragraph.
+- <a href="">: Hyperlink.
+- <img src="" alt="">: Image.
+
+**Attributes:**
+- Provide additional information about tags.
+- Example: <p style="color:blue;">Blue Text</p>
+
+**Empty Elements:**
+- <br>: Line break.
+- <hr>: Horizontal line.
+- <img>: Image (self-closing).
+
+---
+
+#### **2. HTML Meta Tags (Lecture 4)**
+
+**Definition:**
+- Provide metadata (data about data) about a webpage.
+- Found inside <head>.
+
+**Examples:**
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web Tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+</head>
+
+**Types of Lists:**
+1. **Ordered List (numbered):**
+   <ol>
+     <li>Item 1</li>
+     <li>Item 2</li>
+   </ol>
+2. **Unordered List (bulleted):**
+   <ul>
+     <li>Item 1</li>
+     <li>Item 2</li>
+   </ul>
+3. **Description List:**
+   <dl>
+     <dt>HTML</dt>
+     <dd>HyperText Markup Language</dd>
+   </dl>
+
+---
+
+#### **3. HTML Tables (Lecture 5)**
+
+**Basic Structure:**
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>25</td>
+  </tr>
+</table>
+
+**Attributes:**
+- border: Table border.
+- cellpadding: Space between content and cell.
+- cellspacing: Space between cells.
+- colspan: Span across columns.
+- rowspan: Span across rows.
+
+**Example of colspan and rowspan:**
+<table border="1">
+  <tr>
+    <th colspan="2">Header</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Left</td>
+    <td>Right 1</td>
+  </tr>
+  <tr>
+    <td>Right 2</td>
+  </tr>
+</table>
+
+---
+
+#### **4. HTML Forms (Lecture 6)**
+
+**Purpose:**
+- Used to collect user input.
+
+**Example:**
+<form action="submit.php" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <input type="submit" value="Submit">
+</form>
+
+**Common Input Types:**
+- Text: <input type="text">
+- Password: <input type="password">
+- Checkbox: <input type="checkbox">
+- Radio: <input type="radio">
+- File Upload: <input type="file">
+
+**Attributes:**
+- action: URL to send data.
+- method: HTTP method (GET or POST).
+- autocomplete: Enable or disable autofill.
+
+---
+
+#### **5. HTML5 Features (Lecture 7)**
+
+**New Semantic Tags:**
+- <header>: Page header.
+- <footer>: Page footer.
+- <section>: A thematic grouping of content.
+- <article>: Independent content.
+
+**Multimedia:**
+1. **Audio:**
+   <audio controls>
+     <source src="audio.mp3" type="audio/mpeg">
+     Your browser does not support the audio element.
+   </audio>
+2. **Video:**
+   <video width="320" height="240" controls>
+     <source src="video.mp4" type="video/mp4">
+     Your browser does not support the video tag.
+   </video>
+
+**Canvas:**
+- For drawing graphics:
+   <canvas id="myCanvas" width="200" height="100" style="border:1px solid;"></canvas>
+
+---
+
+#### **6. HTML Styles (Lecture 8)**
+
+**Styling Methods:**
+1. **Inline:**
+   <p style="color:blue;">Blue Text</p>
+2. **Internal:**
+   <style>
+     body {
+       background-color: lightblue;
+     }
+   </style>
+3. **External:**
+   <link rel="stylesheet" href="styles.css">
+
+**Common CSS Properties:**
+- color: Text color.
+- font-size: Font size.
+- margin: Outer spacing.
+- padding: Inner spacing.
+
+---
+
+#### **7. HTML Layout & Div (Lecture 9)**
+
+**HTML <div> Tag:**
+- Groups HTML elements for styling and layout.
+- Syntax:
+  <div>
+    <p>Content here</p>
+  </div>
+
+**Advantages:**
+- Groups related elements.
+- Helps apply styles to multiple elements.
+- Facilitates layout design.
+
+**HTML Layout Elements:**
+- <header>, <footer>, <section>, <article>, <aside>, <main>.
+- Example layout:
+  <header>Header</header>
+  <main>Main content</main>
+  <footer>Footer</footer>
+
+---
+
+#### **8. CSS Basics (Lecture 10)**
+
+**CSS Overview:**
+- Stands for Cascading Style Sheets.
+- Controls layout and styling of HTML.
+
+**Syntax:**
+selector {
+  property: value;
+}
+
+**Ways to Add CSS:**
+1. Inline:
+   <p style="color:red;">Red Text</p>
+2. Internal:
+   <style>
+     p {
+       color: red;
+     }
+   </style>
+3. External:
+   <link rel="stylesheet" href="style.css">
+
+**Selectors:**
+- Universal (*): Selects all elements.
+- Class (.class): Selects elements by class.
+- ID (#id): Selects elements by ID.
+- Descendant (parent child): Styles nested elements.
+
+---
+
+#### **9. CSS Selectors (Lecture 11)**
+
+**Pseudo-Classes:**
+- :hover: Styles an element when hovered.
+  a:hover {
+    color: blue;
+  }
+- :focus: Styles an element when focused.
+  input:focus {
+    border: 2px solid red;
+  }
+
+**Pseudo-Elements:**
+- ::before: Inserts content before an element.
+  p::before {
+    content: "Note: ";
+  }
+- ::after: Inserts content after an element.
+  p::after {
+    content: "!";
+  }
+
+---
+
+#### **Exam Preparation Tips:**
+- Practice creating webpages with forms, tables, and styled content.
+- Understand the purpose of HTML5 semantic tags.
+- Experiment with multimedia and CSS properties.
+- Study client-server communication process.
